@@ -241,8 +241,8 @@
     End Sub
     'End Sub
 
-    Private Sub TextBox1_EnterPressed(sender As Object, e As EventArgs) Handles TextBox1.Enter
-        guessButton1_Click(sender, e)
-    End Sub
+
+
+
 End Class
 
