@@ -241,6 +241,13 @@
     End Sub
     'End Sub
 
+    Private Sub TextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
+        If Asc(e.KeyChar) = 13 Then
+            guessButton1_Click(sender, e)
+            'Write whatever you want here
+        End If
+    End Sub
+
 
 
 
