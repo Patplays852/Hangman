@@ -49,6 +49,7 @@ Partial Class Form1
         Me.PlayButton.Name = "PlayButton"
         Me.PlayButton.Size = New System.Drawing.Size(106, 43)
         Me.PlayButton.TabIndex = 0
+        Me.PlayButton.TabStop = False
         Me.PlayButton.Text = "Play"
         Me.PlayButton.UseVisualStyleBackColor = True
         '
@@ -120,6 +121,7 @@ Partial Class Form1
         Me.Line1.Name = "Line1"
         Me.Line1.Size = New System.Drawing.Size(48, 2)
         Me.Line1.TabIndex = 7
+        Me.Line1.TabStop = False
         Me.Line1.Text = "Button2"
         Me.Line1.UseVisualStyleBackColor = True
         '
@@ -131,6 +133,7 @@ Partial Class Form1
         Me.Line2.Name = "Line2"
         Me.Line2.Size = New System.Drawing.Size(48, 2)
         Me.Line2.TabIndex = 8
+        Me.Line2.TabStop = False
         Me.Line2.Text = "Button3"
         Me.Line2.UseVisualStyleBackColor = True
         '
@@ -142,6 +145,7 @@ Partial Class Form1
         Me.Line3.Name = "Line3"
         Me.Line3.Size = New System.Drawing.Size(48, 2)
         Me.Line3.TabIndex = 9
+        Me.Line3.TabStop = False
         Me.Line3.Text = "Button4"
         Me.Line3.UseVisualStyleBackColor = True
         '
@@ -153,6 +157,7 @@ Partial Class Form1
         Me.Line4.Name = "Line4"
         Me.Line4.Size = New System.Drawing.Size(48, 2)
         Me.Line4.TabIndex = 10
+        Me.Line4.TabStop = False
         Me.Line4.Text = "Button5"
         Me.Line4.UseVisualStyleBackColor = True
         '
@@ -164,6 +169,7 @@ Partial Class Form1
         Me.Line5.Name = "Line5"
         Me.Line5.Size = New System.Drawing.Size(48, 2)
         Me.Line5.TabIndex = 11
+        Me.Line5.TabStop = False
         Me.Line5.Text = "Button6"
         Me.Line5.UseVisualStyleBackColor = True
         '
@@ -175,6 +181,7 @@ Partial Class Form1
         Me.Line6.Name = "Line6"
         Me.Line6.Size = New System.Drawing.Size(48, 2)
         Me.Line6.TabIndex = 12
+        Me.Line6.TabStop = False
         Me.Line6.Text = "Button7"
         Me.Line6.UseVisualStyleBackColor = True
         '
@@ -202,9 +209,11 @@ Partial Class Form1
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(292, 290)
+        Me.TextBox1.MaxLength = 1
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(120, 20)
         Me.TextBox1.TabIndex = 15
+        Me.TextBox1.Text = "Enter Guess Here"
         '
         'guessButton1
         '
@@ -212,6 +221,7 @@ Partial Class Form1
         Me.guessButton1.Name = "guessButton1"
         Me.guessButton1.Size = New System.Drawing.Size(80, 19)
         Me.guessButton1.TabIndex = 16
+        Me.guessButton1.TabStop = False
         Me.guessButton1.Text = "Guess"
         Me.guessButton1.UseVisualStyleBackColor = True
         '
