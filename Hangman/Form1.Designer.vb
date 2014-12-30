@@ -40,6 +40,8 @@ Partial Class Form1
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.guessButton1 = New System.Windows.Forms.Button()
+        Me.Credit1 = New System.Windows.Forms.Label()
+        Me.Credit2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'PlayButton
@@ -225,11 +227,33 @@ Partial Class Form1
         Me.guessButton1.Text = "Guess"
         Me.guessButton1.UseVisualStyleBackColor = True
         '
+        'Credit1
+        '
+        Me.Credit1.AutoSize = True
+        Me.Credit1.Location = New System.Drawing.Point(13, 9)
+        Me.Credit1.Name = "Credit1"
+        Me.Credit1.Size = New System.Drawing.Size(68, 13)
+        Me.Credit1.TabIndex = 17
+        Me.Credit1.Text = "Place Holder"
+        Me.Credit1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Credit2
+        '
+        Me.Credit2.AutoSize = True
+        Me.Credit2.Location = New System.Drawing.Point(13, 43)
+        Me.Credit2.Name = "Credit2"
+        Me.Credit2.Size = New System.Drawing.Size(68, 13)
+        Me.Credit2.TabIndex = 18
+        Me.Credit2.Text = "Place Holder"
+        Me.Credit2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(424, 502)
+        Me.Controls.Add(Me.Credit2)
+        Me.Controls.Add(Me.Credit1)
         Me.Controls.Add(Me.guessButton1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.ListBox1)
@@ -273,5 +297,7 @@ Partial Class Form1
     Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents guessButton1 As System.Windows.Forms.Button
+    Public WithEvents Credit1 As System.Windows.Forms.Label
+    Public WithEvents Credit2 As System.Windows.Forms.Label
 
 End Class

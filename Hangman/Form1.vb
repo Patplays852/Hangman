@@ -11,9 +11,18 @@
     Dim GameStarted As Boolean = False      ' will switch to True when the user click on Play Button
     Dim RightTrys As Integer                ' will hold the number of the right guessed letters
     Dim WrongTrys As Integer                ' will hold the number of the wrong guessed letters
+    Dim Modifier() As String = {"Battled a shark:", "Written with care:", "Ate all the sandwiches:", "Slept in:"}
+    Dim Author() As String = {"Pat", "Justin"}
+
+    'Makes the Labels
+    Public Sub funstuff()
+
+        Dim Random As New Random
+        Me.Credit1.Text = Modifier(Random.Next(0, Modifier.Length)) + " " + Author(Random.Next(0, Author.Length))
+        Me.Credit2.Text = Modifier(Random.Next(0, Modifier.Length)) + " " + Author(Random.Next(0, Author.Length))
+    End Sub
 
     'Draws the starting hanger
-    'Another
     Public Sub DrawHanger()
 
         Dim pnt As Graphics
@@ -173,6 +182,7 @@
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         clearLetters()
         hideCharachterLength()
+        funstuff()
     End Sub
 
     'Play Button controls
