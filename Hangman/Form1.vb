@@ -216,35 +216,68 @@
         If GameStarted = True Then
             If TextBox1.Text = "" Then
             Else
-                If TextBox1.Text.ToUpper.Contains(Char1) And Letter1.Text = "" And Char1 <> "" Then
-                    Letter1.Text = Char1
-                    RightTrys += 1
-                    CheckForWinning()
-                ElseIf TextBox1.Text.ToUpper.Contains(Char2) And Letter2.Text = "" And Char2 <> "" Then
-                    Letter2.Text = Char2
-                    RightTrys += 1
-                    CheckForWinning()
-                ElseIf TextBox1.Text.ToUpper.Contains(Char3) And Letter3.Text = "" And Char3 <> "" Then
-                    Letter3.Text = Char3
-                    RightTrys += 1
-                    CheckForWinning()
-                ElseIf TextBox1.Text.ToUpper.Contains(Char4) And Letter4.Text = "" And Char4 <> "" Then
-                    Letter4.Text = Char4
-                    RightTrys += 1
-                    CheckForWinning()
-                ElseIf TextBox1.Text.ToUpper.Contains(Char5) And Letter5.Text = "" And Char5 <> "" Then
-                    Letter5.Text = Char5
-                    RightTrys += 1
-                    CheckForWinning()
-                ElseIf TextBox1.Text.ToUpper.Contains(Char6) And Letter6.Text = "" And Char6 <> "" Then
-                    Letter6.Text = Char6
-                    RightTrys += 1
-                    CheckForWinning()
-                Else
-                    WrongTrys += 1
-                    StartDrawingWhenLosing(WrongTrys)
-                    WrongGuessesLabel.Text = WrongGuessesLabel.Text & " " & TextBox1.Text
-                End If
+                Dim holder As String
+                holder = TextBox1.Text.ToUpper
+                Select Case holder
+                    Case Char1
+                        Letter1.Text = Char1
+                        RightTrys += 1
+                        CheckForWinning()
+                    Case Char2
+                        Letter2.Text = Char2
+                        RightTrys += 1
+                        CheckForWinning()
+                    Case Char3
+                        Letter3.Text = Char3
+                        RightTrys += 1
+                        CheckForWinning()
+                    Case Char4
+                        Letter4.Text = Char4
+                        RightTrys += 1
+                        CheckForWinning()
+                    Case Char5
+                        Letter5.Text = Char5
+                        RightTrys += 1
+                        CheckForWinning()
+                    Case Char6
+                        Letter6.Text = Char6
+                        RightTrys += 1
+                        CheckForWinning()
+                    Case Else
+                        WrongTrys += 1
+                        StartDrawingWhenLosing(WrongTrys)
+                        WrongGuessesLabel.Text = WrongGuessesLabel.Text & " " & TextBox1.Text
+                End Select
+
+                'If TextBox1.Text.ToUpper.Contains(Char1) And Letter1.Text = "" And Char1 <> "" Then
+                '    Letter1.Text = Char1
+                '    RightTrys += 1
+                '    CheckForWinning()
+                'ElseIf TextBox1.Text.ToUpper.Contains(Char2) And Letter2.Text = "" And Char2 <> "" Then
+                '    Letter2.Text = Char2
+                '    RightTrys += 1
+                '    CheckForWinning()
+                'ElseIf TextBox1.Text.ToUpper.Contains(Char3) And Letter3.Text = "" And Char3 <> "" Then
+                '    Letter3.Text = Char3
+                '    RightTrys += 1
+                '    CheckForWinning()
+                'ElseIf TextBox1.Text.ToUpper.Contains(Char4) And Letter4.Text = "" And Char4 <> "" Then
+                '    Letter4.Text = Char4
+                '    RightTrys += 1
+                '    CheckForWinning()
+                'ElseIf TextBox1.Text.ToUpper.Contains(Char5) And Letter5.Text = "" And Char5 <> "" Then
+                '    Letter5.Text = Char5
+                '    RightTrys += 1
+                '    CheckForWinning()
+                'ElseIf TextBox1.Text.ToUpper.Contains(Char6) And Letter6.Text = "" And Char6 <> "" Then
+                '    Letter6.Text = Char6
+                '    RightTrys += 1
+                '    CheckForWinning()
+                'Else
+                '    WrongTrys += 1
+                '    StartDrawingWhenLosing(WrongTrys)
+                '    WrongGuessesLabel.Text = WrongGuessesLabel.Text & " " & TextBox1.Text
+                'End If
             End If
         Else
         End If
