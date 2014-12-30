@@ -41,7 +41,8 @@
         WrongGuessesLabel.Text = ""
         Dim pnt As Graphics
         pnt = Me.CreateGraphics
-        pnt.Clear(Color.FromArgb(0, 192, 0))
+        pnt.Clear(Color.White)
+        'pnt.Clear(Color.FromArgb(0, 0, 0))
         PlayButton.Visible = True
     End Sub
 
@@ -95,16 +96,7 @@
         End If
     End Sub
 
-    'Hide all the spaces
-    'Public Sub hideCharachterLength()
-    'Line1.Visible = False
-    'Line2.Visible = False
-    'Line3.Visible = False
-    'Line4.Visible = False
-    'Line5.Visible = False
-    'Line6.Visible = False
-    'End Sub
-
+   
     'assign a letter to each Char string
     Public Sub AssignLetters()
         If WordLength = 2 Then
@@ -185,6 +177,41 @@
         funstuff()
     End Sub
 
+    Private Sub revealLetter(holder As Char)
+        Dim rightHolder As Integer
+        rightHolder = RightTrys
+        If Char1 = holder Then
+            Letter1.Text = Char1
+            RightTrys += 1
+        End If
+        If Char2 = holder Then
+            Letter2.Text = Char2
+            RightTrys += 1
+        End If
+        If Char3 = holder Then
+            Letter3.Text = Char3
+            RightTrys += 1
+        End If
+        If Char4 = holder Then
+            Letter4.Text = Char4
+            RightTrys += 1
+        End If
+        If Char5 = holder Then
+            Letter5.Text = Char5
+            RightTrys += 1
+        End If
+        If Char6 = holder Then
+            Letter6.Text = Char6
+            RightTrys += 1
+        End If
+        CheckForWinning()
+        If rightHolder = RightTrys Then
+            WrongTrys += 1
+            StartDrawingWhenLosing(WrongTrys)
+            WrongGuessesLabel.Text = WrongGuessesLabel.Text & " " & TextBox1.Text
+        End If
+        TextBox1.Text = ""
+    End Sub
     'Play Button controls
     Private Sub PlayButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PlayButton.Click
         Char1 = ""
@@ -218,36 +245,8 @@
             Else
                 Dim holder As String
                 holder = TextBox1.Text.ToUpper
-                Select Case holder
-                    Case Char1
-                        Letter1.Text = Char1
-                        RightTrys += 1
-                        CheckForWinning()
-                    Case Char2
-                        Letter2.Text = Char2
-                        RightTrys += 1
-                        CheckForWinning()
-                    Case Char3
-                        Letter3.Text = Char3
-                        RightTrys += 1
-                        CheckForWinning()
-                    Case Char4
-                        Letter4.Text = Char4
-                        RightTrys += 1
-                        CheckForWinning()
-                    Case Char5
-                        Letter5.Text = Char5
-                        RightTrys += 1
-                        CheckForWinning()
-                    Case Char6
-                        Letter6.Text = Char6
-                        RightTrys += 1
-                        CheckForWinning()
-                    Case Else
-                        WrongTrys += 1
-                        StartDrawingWhenLosing(WrongTrys)
-                        WrongGuessesLabel.Text = WrongGuessesLabel.Text & " " & TextBox1.Text
-                End Select
+                revealLetter(holder)
+                
 
                 'If TextBox1.Text.ToUpper.Contains(Char1) And Letter1.Text = "" And Char1 <> "" Then
                 '    Letter1.Text = Char1
