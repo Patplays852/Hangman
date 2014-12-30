@@ -185,6 +185,7 @@
         Char6 = ""
         DrawHanger()
         Dim number As Integer
+        Randomize()
         number = CInt(Math.Floor((ListBox1.Items.Count - 1) * Rnd()))
         Word = ListBox1.Items(number)
         WordLength = Word.Length
