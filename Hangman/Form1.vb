@@ -13,6 +13,7 @@
     Dim WrongTrys As Integer                ' will hold the number of the wrong guessed letters
 
     'Draws the starting hanger
+    'Another
     Public Sub DrawHanger()
 
         Dim pnt As Graphics
