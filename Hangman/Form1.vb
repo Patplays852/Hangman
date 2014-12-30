@@ -185,8 +185,7 @@
         Char6 = ""
         DrawHanger()
         Dim number As Integer
-        'number = Int(Rnd() * ListBox1.Items.Count - 1) + 1
-        number = Int(Rnd(ListBox1.Items.Count - 1))
+        number = CInt(Math.Floor((ListBox1.Items.Count - 1) * Rnd()))
         Word = ListBox1.Items(number)
         WordLength = Word.Length
         ShowLength(Word.Length)
