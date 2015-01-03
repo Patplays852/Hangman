@@ -11,7 +11,7 @@
     Dim GameStarted As Boolean = False      ' will switch to True when the user click on Play Button
     Dim RightTrys As Integer                ' will hold the number of the right guessed letters
     Dim WrongTrys As Integer                ' will hold the number of the wrong guessed letters
-    Dim Modifier() As String = {"Battled a shark:", "Written with care:", "Ate all the sandwiches:", "Slept in:", "Called Cthulu:"}
+    Dim Modifier() As String = {"Battled a shark:", "Written with care:", "Ate all the sandwiches:", "Slept in:", "Called Cthulu:", "test"}
     Dim Author() As String = {"Pat", "Justin", "Joe", "Jason", "John", "Brian", "Donovan"}
 
     'Makes the Labels
